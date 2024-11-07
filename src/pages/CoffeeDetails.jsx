@@ -13,7 +13,8 @@ const CoffeeDetails = () => {
     useEffect(() => {
         const singleData = data.find(coffee => coffee.id === parseInt(id))
         setCoffee(singleData)
-
+        console.log(coffee);
+        
         const favorites = getAllFavorites()
         const isExist = favorites.find(item => item.id == singleData.id)
         if(isExist){
@@ -21,7 +22,8 @@ const CoffeeDetails = () => {
         }
 
     },[data, id])
-
+    console.log(coffee);
+    
     const {
         name,
         image,

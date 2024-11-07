@@ -1,10 +1,18 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { FaTrashAlt } from 'react-icons/fa';
+import { Link, useLocation } from 'react-router-dom';
+import { removeFavorite } from '../utils';
 
 
-const Card = ({coffee}) => {
+const Card = ({coffee, handleRemove}) => {
     console.log(coffee);
+        // const location = useLocation()
+        // console.log(location);
+        const {pathname} = useLocation()
+        console.log(pathname);
+
+
     const {name,image,category,origin,type,id,rating,popularity} = coffee || {}
 
     return (
@@ -26,6 +34,14 @@ const Card = ({coffee}) => {
                 </div>
             
             </Link>
+
+            {
+                pathname === '/dashboard' && 
+                <div 
+                // onClick={() => removeFavorite(id)}
+                onClick={() => handleRemove(id)}
+                className='absolute -top-5 -right-5 bg-warning p-3 rounded-full cursor-pointer'><FaTrashAlt size={20} /></div>
+            }
         </div>
     );
 };
