@@ -11,3 +11,8 @@ Currently, two official plugins are available:
 ## Live link
 
 - **Netlify: ** [https://coffee-book-react.netlify.app/](https://coffee-book-react.netlify.app/)
+
+Packages used in this project:
+
+- [React-Hot-Toast](https://react-hot-toast.com/)
+- [React-Icons](https://react-icons.github.io/react-icons/)

@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
 const Card = ({coffee}) => {
     console.log(coffee);
     const {name,image,category,origin,type,id,rating,popularity} = coffee || {}
@@ -9,7 +10,7 @@ const Card = ({coffee}) => {
     return (
         <div className='flex relative rounded-2xl border '>
             <Link
-            
+            to={`/coffee/${id}`}
             className='transition hover:scale-105 shadow-xl rounded-md overflow-hidden w-full '
             >
                 <figure className=' h-48 overflow-hidden'>
